@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/auth_background.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -14,9 +15,14 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Stack(
-        children: [_loginForm()],
+      body: AuthBackground(
+          child: Column(
+        children: [
+          SizedBox(
+            height: 250,
+          ),
+          _loginForm()
+        ],
       )),
     );
   }
