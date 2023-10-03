@@ -16,14 +16,24 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AuthBackground(
-          child: Column(
-        children: [
-          SizedBox(
-            height: 250,
+          child: SingleChildScrollView(
+            controller: controller,
           ),
-          _loginForm()
-        ],
-      )),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 250,
+              ),
+              Text(
+                'Login',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              _loginForm()
+            ],
+          )),
     );
   }
 
